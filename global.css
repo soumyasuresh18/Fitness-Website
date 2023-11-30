@@ -1,0 +1,360 @@
+/* PRESETS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Nova Square', sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  form {
+    background: #191a1d;
+    color: #d9d9d9;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+    text-align: center;
+    margin: 2rem;
+    border-radius: 32px;
+    width: 35%;
+    box-shadow: 0 0 3px #283618;
+  }
+  
+  input {
+    width: 90%;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 0.6rem;
+  }
+  
+  select {
+    width: 90%;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 0.6rem;
+  }
+  
+  label {
+    margin-bottom: 0.6rem;
+    margin-right: 0.4rem;
+  }
+  
+  .btn {
+    cursor: pointer;
+    margin-top: 1.25rem;
+    padding: 0.6rem 2rem;
+    border-radius: 16px;
+    letter-spacing: 0.5px;
+    color: #fafee0;
+    box-shadow: 0 0 3px #283618;
+  }
+  
+  .btn-blue {
+    background: #bc6c25;
+  }
+  
+  .btn-blue:hover {
+    background: #191a1d;
+    border: 1px solid #bc6c25;
+  }
+  
+  .btn-dark {
+    background: #191a1d;
+  }
+  
+  .btn-dark:hover {
+    background: #c9c9c9;
+    color: #283618;
+    border: 1px solid #283618;
+  }
+  
+  .page {
+    padding: 4rem 15% 4rem 15%;
+    text-align: center;
+  }
+  
+  .page-dark {
+    background: #191a1d;
+    color: #fafee0;
+  }
+  
+  .page-light {
+    background: #c9c9c9;
+    color: #283618;
+  }
+  
+  .page-dark h1 {
+    color: #fafee0;
+    text-align: center;
+  }
+  
+  .page-light h1 {
+    color: #283618;
+    text-align: center;
+  }
+  
+  .list-box {
+    text-align: left;
+    width: 35%;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: baseline;
+  }
+  
+  .v-container {
+    color: #fafee0;
+    text-shadow: 2px 2px black;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  #bmi-result,
+  #calorie-result {
+    padding: 0.5rem;
+    font-weight: normal;
+    background: #bc6c25;
+    box-shadow: 0 0 4px #283618;
+    border-radius: 12px;
+    color: #fafee0;
+  }
+  
+  /* STYLES */
+  
+  /* Navbar */
+  
+  #navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+    background: #191a1d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 4px;
+  }
+  
+  #navbar a h2 {
+    color: #fafee0;
+    border-bottom-style: solid;
+  }
+  
+  #navbar a h2:hover {
+    border-color: #bc6c25;
+  }
+  
+  #navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #navbar ul li a {
+    color: #d9d9d9;
+    justify-content: center;
+    padding: 0.25rem;
+    margin: 0.5rem 0.5rem;
+    text-decoration: none;
+  }
+  
+  #navbar ul li a:hover {
+    border-bottom-style: solid;
+    color: #fafee0;
+    border-bottom-color: #bc6c25;
+  }
+  
+  /* About */
+  
+  #about{
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: center top;
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+    text-shadow: 1px 1px #283618;
+  }
+  
+  #about .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  
+  #about p {
+    color: #d9d9d9;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  #about a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #about ul {
+    color: #fafee0;
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+  
+  #about ul li::before {
+    content: "\1f87a"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #bc6c25; /* Change the color */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+    margin-right: 0.5em;
+  }
+  
+  #about .btn{
+    box-shadow: 0 0 8px #283618;
+  }
+  
+  /* BMI Calculator*/
+  
+  #bmi-calculator ul {
+    padding-left: 2rem;
+  }
+  
+  /* Caloric Needs */
+  
+  #calorie-form {
+    border: 2px solid #bc6c25;
+  }
+  
+  #caloric-needs ul {
+    margin-left: 2rem;
+    color: #d9d9d9;
+  }
+  
+  #male,
+  #female {
+    width: 10%;
+  }
+  
+  /* Workout Planning */
+  
+  #workout-planning {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  
+  #workout-planning p {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  
+  #workout-planning h2 {
+    text-align: left;
+  }
+  
+  .slide {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 4px #283618;
+    /* width: 48rem;
+    height: 27rem; */
+  }
+  
+  .slide table {
+    color: #fafee0;
+    background-color: rgba(0, 0, 0, 0.75);
+    text-shadow: 0 0 4px #283618;
+    margin: 4rem auto 4rem auto;
+    width: 100;
+    font-size: 10pt;
+    border-collapse: collapse;
+  }
+  
+  .slide table,
+  th,
+  td {
+    border: 1px solid #bc6c25;
+  }
+  
+  #gaining-muscle {
+    background-image: url("../img/gaining-muscle.jpg");
+  }
+  
+  #losing-weight {
+    background-image: url("../img/losing-weight.jpg");
+  }
+  
+  #building-strength{
+    background-image: url("../img/building-strength.jpg");
+  }
+  
+  #building-stamina{
+    background-image: url("../img/building-stamina.jpg");
+  }
+  
+  #street-workout{
+    background-image: url("../img/street-workout.jpg");
+  }
+  
+  /* Exercise Guide */
+  
+  #exercise-guide select {
+    width: 30%;
+  }
+  
+  /* FAQ */
+  
+  #faq .list-box {
+    background: #191a1d;
+    text-align: left;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    width: 100%;
+    border-radius: 32px;
+    box-shadow: 0 0 3px #283618;
+  }
+  
+  #faq .list-box ul li {
+    color: #c9c9c9;
+    margin: 1rem 0 1rem 1rem;
+  }
+  
+  #faq h3{
+    color: #fafee0;
+  }
+  
+  #faq a{
+    color: #fafee0;
+  }
+  
+  #faq a:hover{
+    color: #283618;
+  }
+  
+  /* Contact */
+  
+  #contact {
+    text-align: left;
+    padding-bottom: 2rem;
+  }
+  
+  #contact a {
+    color: #d9d9d9;
+  }
+  
+  #contact a:hover {
+    color: #bc6c25;
+    text-decoration: underline;
+  }
